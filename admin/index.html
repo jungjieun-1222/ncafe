@@ -1,69 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* #week-chart .title{
+      color: red;
+      border: 1px dotted red;
+    } */
+    .chart-section>.title+div>section.first-child~section{
+        color: blue; border: 1px dotted blue;
+    }
+  </style>
 </head>
 <body>
-    <!-- =============================== header =============================== -->
-    <div>
-     <div>Ncafe</div>
-     <div>공유</div>
-    </div> 
-    <!-- =============================== mainheader =============================== -->
-    <div>
-        <section>
-            <h1>차트</h1>
+  <!-- === header ===================== -->
+  <div class="menu-name menu-price menu-date">
+    <h1 class="aa" lang="zh-CN">NCafe</h1>
+    <div>공유</div>
+  </div>
+  <!-- === main ===================== -->
+  <main>
+    <section class="chart-section">
+      <h1 class="title">차트</h1>
+      <div>
+        <section id="week-chart" class="first-child">
+          <h1 class="title">차트 데이터</h1>
+          <!-- 요일 레이블 -->
+          <ul>
+            <li>Mon</li>
+            <li>Tue</li>
+            <li>Wed</li>
+            <li>Thr</li>
+            <li>Fri</li>
+            <li>Sat</li>
+            <li>Sun</li>
+          </ul>
         </section>
-        <div>
-            <section>
-                <h1>주간매출현황</h1>
-                <input type="image" name="주간매출현황">
-            </section>
-            <section>
-                <h1>오늘의 주문</h1>
-                <input type="image" name="오늘의 주문">
-            </section>
-            <nav>
-                <h1>바로가기 메뉴</h1>
-                <ul>
-                    <li><a href="../index.html">대시보드</a></li>
-                    <li><a href="../list.html">커피목록</a></li>
-                    <li><a href="../create.html">메뉴추가</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-    <!-- =============================== footer =============================== -->
-    <footer>
         <section>
-            <h1>사이트 정보</h1>
-            <div>
-                <section>
-                    <h1>회사정보</h1>
-                    <dl>
-                        <dt>상호</dt>
-                        <dd>뉴카페</dd>
-                        <dt>업자등록번호</dt>
-                        <dd>111-222222-11</dd>
-                        <dt>대표</dt>
-                        <dd>뉴렉처</dd>
-                    </dl>
-                </section>
-                <section>
-                    <h1>연락처</h1>
-                    <dl>
-                        <dt>주소</dt>
-                        <dd>서울시 마포구 백범로...</dd>
-                        <dt>전화</dt>
-                        <dd>02-111-333</dd>
-                        <dt>이메일</dt>
-                        <dd>help@ncafe.com</dd>
-                    </dl>
-                </section>
-            </div>
+          <h1 class="title">오늘의 주문</h1>
+          <!-- === 오늘의 주문 차트 =============== -->
+          
+          <div>차트 데이터</div>
+          
         </section>
-    </footer>
+
+        <section>
+            <h1 class="title">오늘의 판매량</h1>
+        </section>
+      </div>   
+    </section>
+  </main>
+  <nav>
+    <h1>바로가기 메뉴</h1>
+    <ul>
+      <li><a href="index.html">대시보드</a></li>
+      <li><a href="menu/list.html">커피목록</a></li>
+      <li><a href="menu/create.html">메뉴추가</a></li>
+    </ul>
+  </nav>
+  <!-- === footer ==================== -->
+  <footer id="footer">
+    <section>
+      <h1>사이트 정보</h1>
+      <div>
+        <section>
+          <h1>회사정보</h1>
+          <dl>
+            <dt>상호</dt>
+            <dd>뉴카페</dd>
+            <dt>업자등록번호</dt>
+            <dd>111-222222-11</dd>
+            <dt>대표</dt>
+            <dd>뉴렉처</dd>
+          </dl>
+        </section>
+        <section>
+          <h1>연락처</h1>
+          <dl>
+            <dt>주소</dt>
+            <dd>서울시 마포구 백범로...</dd>
+            <dt>전화</dt>
+            <dd>02-111-333</dd>
+            <dt>이메일</dt>
+            <dd>help@ncafe.com</dd>
+          </dl>
+        </section>
+      </div>
+    </section>
+  </footer>
 </body>
 </html>
