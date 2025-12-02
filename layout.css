@@ -1,3 +1,19 @@
+#root{
+    background-color: #f8f8f8;
+
+    width: 100%; /* 고정크기(cm, mm / px), 가변크기(em, rem, %, vw, vh)*/
+    height:100%;
+
+    display: flex;
+    flex-direction: column; 
+}
+/* 밝은 or 다크모드에서 잘 보이게 배경설정  */
+@media (prefers-color-scheme: dark){
+    #root{
+        background-color: black;
+    }
+}
+
 /*
 
 // 가장 큰 박스(박스의 기본 레이아웃(flex 레이아웃),  -> 작은 박스 -> 콘텐츠
@@ -95,15 +111,7 @@ body{
     height:100%;
     margin:0;
 }
-#root{
-    background-color: #f8f8f8;
 
-    width: 100%; /* 고정크기(cm, mm / px), 가변크기(em, rem, %, vw, vh)*/
-    height:100%;
-
-    display: flex;
-    flex-direction: column;      
-}
 
 /* 공통 분모는 위에 */
 .header, 

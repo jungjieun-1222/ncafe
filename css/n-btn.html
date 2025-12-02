@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="n-btn.css">
+    <style>
+        /* 슈도 클래스 - :로 앞에 부모에 자식을 지정가능*/
+        .n-btn:first-child{
+            border: 2px solid red;
+        }
+        .n-btn:hover{
+            background-color: rgb(47, 172, 47);
+            /* padding: 30px; */
+
+            transform: rotatez(45deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- 자식에 대한 클래스 지정 안해도 슈도클래스로 적용됨 -->
+    <button class="n-btn">버튼</button>
+    <button class="n-btn">버튼</button>
+    <button class="n-btn">버튼</button>
+    <button class="n-btn">버튼</button>
+</body>
+</html>

@@ -1,0 +1,79 @@
+ /* 버튼에서 변화를 줄 수 있는 옵션들을 변수로 선언 */
+/* .n-btn {
+    --btn-background-color: #6750A4;
+    --btn-color: #ffffff;
+    --btn-height: 48px; 
+    --btn-padding: 0 16px;
+    --btn-border-radius: 999px; 
+}
+/* 다크모드일때 버튼의 색상을 변경 */
+/* @media (prefers-color-scheme: dark) {
+    .n-btn {
+        --btn-background-color: #ffffff;
+        --btn-color: #381572;
+    }
+} */
+/* 실제로 버튼정의를 위한 스타일 코드를 작성 */
+/* .n-btn {
+    font-weight: 500; 
+    font-size: 14px;
+    line-height: 20px;
+    
+    background-color: var(--btn-background-color);
+    color: var(--btn-color);
+
+    height: var(--btn-height); 
+    padding: var(--btn-padding);
+    border-radius: var(--btn-border-radius); 
+}  */
+
+   
+.n-btn{
+    /* ----------상수변수-------------- */
+    /* 한정된 변수로 사용할때는 좋음 but 변수가 생기면 다 넣어야함 */
+    /* --btn-height: 32px, 40px, 56px, 96px, 136px */
+    --btn-height-1: 32px;
+    --btn-height-2: 40px;
+    --btn-height-3: 56px;
+    --btn-height-4: 96px;
+    --btn-height-5: 136px;
+
+    --btn-padding-1: 0 12px;
+    --btn-padding-2: 0 16px;
+    --btn-padding-3: 0 24px;
+    --btn-padding-4: 0 48px;
+    --btn-padding-5: 0 64px;
+    /* --------------변수---------------- */
+    --btn-color: var(--color-main-2);
+    --btn-size: var(--icon-size-1);
+    --btn-weight: 500;
+    --btn-height: var(--btn-height-2);
+    --btn-padding: var(--btn-padding-2);
+    --btn-fill: 1;
+}
+
+@media (prefers-color-scheme: dark){
+    .n-btn{
+        --btn-color: var(--color-main-1);
+    }
+}
+
+.n-btn{
+      /* boxing*/
+      height: var(--btn-height);
+      padding: var(--btn-padding);
+      border-radius: 40px;  
+      border: 0px;
+      background-color: var(--btn-color);
+      /* content */
+      font-size: var(--btn-size);
+      font-weight: var(--btn-weight);
+      color:var(--color-base-1);
+      font-variation-settings: 'FILL' var(--btn-fill);
+
+      /* effect */
+      transition: 
+      background-color 2s ease, 
+      padding 2s ease,
+      transfom 2s ease;
+  }
